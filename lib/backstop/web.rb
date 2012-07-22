@@ -65,6 +65,7 @@ module Backstop
       data["source"] = "github"
       data["ref"].gsub!(/\//, ".")
       p data
+      p "hello"
       data["commits"].each do |commit|
         measure_time = DateTime.parse(commit["timestamp"]).strftime("%s")
         s = sockets.sample
